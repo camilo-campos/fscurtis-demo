@@ -1,0 +1,14 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+
+# Directorios virtualenv (si estás usando un entorno virtual)
+env/
+venv/
+ENV/
+venv.bak/
+*.env
+
+

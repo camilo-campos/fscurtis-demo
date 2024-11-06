@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Interactivo</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Barra Lateral -->
+      <div class="sidebar">
+        <ul>
+          <li>
+            <button class="sidebar-item" id="configBtn">Configuración</button>
+          </li>
+          <li>
+            <button class="sidebar-item" id="historyBtn">Historial</button>
+          </li>
+          <li><button class="sidebar-item" id="helpBtn">Ayuda</button></li>
+          <li>
+            <button class="sidebar-item" id="newCaseBtn">Nuevo Caso</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Zona Central (Chat) -->
+      <div class="chat-container">
+        <div class="chat-box" id="chatBox">
+          <!-- Mensajes del chat -->
+        </div>
+
+        <!-- Campo de Entrada y Enviar -->
+        <div class="chat-input">
+          <input
+            type="text"
+            id="userMessage"
+            placeholder="Escribe tu mensaje..."
+          />
+          <button id="sendBtn">Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
