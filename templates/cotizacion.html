@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cotizacion</title>
+  </head>
+  <style>
+    /* Estilo General */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Contenedor Principal */
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    /* Barra Lateral */
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+    }
+
+    .sidebar-item {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+      margin: 10px 0;
+      transition: background 0.3s;
+    }
+
+    .sidebar-item:hover {
+      background-color: #555;
+    }
+
+    /* Zona Central (Chat) */
+    .chat-container {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    /* Contenedor del Formulario */
+    .cotizacion-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      background-color: #f4f4f4;
+    }
+
+    .form-cotizacion {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-cotizacion label {
+      margin-top: 10px;
+    }
+
+    .form-cotizacion input,
+    .form-cotizacion textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-cotizacion button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-cotizacion button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- Barra Lateral -->
+      <div class="sidebar">
+        <ul>
+          <li>
+            <button class="sidebar-item" id="configBtn">Configuración</button>
+          </li>
+          <li>
+            <button class="sidebar-item" id="historyBtn">Historial</button>
+          </li>
+          <li><button class="sidebar-item" id="helpBtn">Ayuda</button></li>
+          <li>
+            <a href="/">
+              <button class="sidebar-item" id="newCaseBtn">Nuevo Chat</button>
+            </a>
+          </li>
+          <li>
+            <img
+              src="static/images/image.png"
+              alt="Descripción de la imagen"
+              style="width: 200px; height: auto"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <!-- Zona Central (Chat) -->
+      <div class="chat-container">
+        <div class="cotizacion-container">
+          <form class="form-cotizacion">
+            <label for="nombre">Nombre del Cliente o Empresa:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="telefono">Fecha de Emisión :</label>
+            <input type="text" id="fecha_actual" name="fecha_actual" required />
+
+            <label for="telefono">Fecha de Validez:</label>
+            <input
+              type="text"
+              id="fecha_validez"
+              name="fecha_validez"
+              required
+            />
+
+            <label for="productos">Descripción del Producto o Servicio:</label>
+            <textarea id="productos" name="productos" required></textarea>
+
+            <label for="detalles2">Términos y Condiciones:</label>
+            <textarea id="terminos" name="terminos" required></textarea>
+
+            <button type="submit">Enviar Cotización</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
