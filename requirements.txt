@@ -1,0 +1,7 @@
+fastapi
+langgraph
+uvicorn 
+langchain-core 
+langchain-groq 
+langchain
+langchain_ibm
